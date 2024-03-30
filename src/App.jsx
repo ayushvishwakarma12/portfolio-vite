@@ -8,6 +8,7 @@ import Project from "./components/project/Project";
 import Contact from "./components/contact/Contact";
 import Experience from "./components/experience/Experience";
 import ProjectCard from "./components/projectCard/ProjectCard";
+import Skills from "./components/skills/Skills";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ function App() {
     <div>
       <Navbar />
       <Banner />
+      <Skills />
       <Project />
       <Contact />
       <Experience />
