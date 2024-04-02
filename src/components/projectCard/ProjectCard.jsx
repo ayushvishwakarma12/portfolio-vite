@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import projects from "../../utils/Projects";
-import Project from "../project/Project";
 
 const SingleCard = ({ item }) => {
   const ref = useRef();

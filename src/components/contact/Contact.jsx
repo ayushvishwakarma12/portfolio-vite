@@ -67,23 +67,25 @@ const Contact = () => {
 
   return (
     <motion.section
-      className=" flex gap-5 py-10 w-full"
+      className=" flex flex-col md:flex-row gap-5 py-10 w-full"
       variants={variants}
       initial="initial"
       whileInView="animate"
       ref={ref}
     >
       <div className="w-full flex flex-col">
-        <div className="w-[60%] mx-auto mt-[100px]">
+        <div className="lg:w-[60%] px-8 lg:px-[0px] lg:mx-auto mt-[100px]">
           <motion.h1
-            className="text-white font-bold text-6xl"
+            className="text-white font-bold text-2xl md:text-4xl lg:text-6xl"
             variants={variants}
           >
             Get In Touch
           </motion.h1>
           <motion.div className=" text-start mt-4" variants={variants}>
-            <h2 className="font-bold text-xl">Mail : </h2>
-            <h2 className="text-lg">Ayushvishwakarma114@gmail.com</h2>
+            <h2 className="font-bold text-lg md:text-xl">Mail : </h2>
+            <h2 className="text-base md:text-lg">
+              Ayushvishwakarma114@gmail.com
+            </h2>
           </motion.div>
         </div>
       </div>
@@ -92,12 +94,10 @@ const Contact = () => {
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
           transition={{ delay: 3, duration: 1 }}
-          className=" absolute m-auto stroke-orange-500 py-5 px-10"
+          className=" absolute lg:h-1/2 lg:w-1/2 stroke-orange-500 py-5 px-10 mx-auto w-full text-center flex justify-center items-center"
         >
           <svg
-            className=""
-            width="250px"
-            height="250px"
+            className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] mx-auto"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -128,15 +128,15 @@ const Contact = () => {
           </svg>
         </motion.div>
         <motion.form
-          className=" w-full p-5 relative"
+          className="w-full p-5 relative"
           onSubmit={handleSubmit}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-2 md:gap-5">
             <input
-              className="p-4 outline-none rounded-2xl text-lg w-full"
+              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full"
               type="text"
               placeholder="First Name"
               value={formDetails.firstName}
@@ -144,23 +144,23 @@ const Contact = () => {
               onChange={(e) => onFormUpdate("firstName", e.target.value)}
             />
             <input
-              className="p-4 outline-none rounded-2xl text-lg w-full"
+              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full"
               type="text"
               placeholder="Last Name"
               name="lastname"
               onChange={(e) => onFormUpdate("lastName", e.target.value)}
             />
           </div>
-          <div className="flex items-center gap-5 mt-5">
+          <div className="flex items-center gap-2 md:gap-5 mt-5">
             <input
-              className="p-4 outline-none rounded-2xl text-lg w-full"
+              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full"
               type="email"
               placeholder="Email Address"
               name="user_email"
               onChange={(e) => onFormUpdate("email", e.target.value)}
             />
             <input
-              className="p-4 outline-none rounded-2xl text-lg w-full"
+              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full"
               type="tel"
               placeholder="Phone no."
               name="phone"
@@ -169,7 +169,7 @@ const Contact = () => {
           </div>
           <textarea
             rows="6"
-            className="p-4 outline-none rounded-2xl text-lg w-full mt-5"
+            className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full mt-5"
             placeholder="Message"
             name="message"
             onChange={(e) => onFormUpdate("message", e.target.value)}

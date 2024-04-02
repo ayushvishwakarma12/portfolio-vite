@@ -1,11 +1,10 @@
-export const HTML = ({ width, height }) => {
+export const HTML = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
@@ -22,14 +21,13 @@ export const HTML = ({ width, height }) => {
   );
 };
 
-export const CSS = ({ width, height }) => {
+export const CSS = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
@@ -46,14 +44,13 @@ export const CSS = ({ width, height }) => {
   );
 };
 
-export const TailwindCSS = ({ width, height }) => {
+export const TailwindCSS = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path
@@ -70,8 +67,7 @@ export const ReactJS = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path
@@ -97,8 +93,7 @@ export const NextJS = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path
@@ -115,8 +110,7 @@ export const Redux = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path
@@ -141,8 +135,7 @@ export const Bootstrap = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path
@@ -163,8 +156,7 @@ export const JavaScript = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
@@ -182,8 +174,7 @@ export const Python = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path
@@ -204,8 +195,7 @@ export const ExpressJS = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path
@@ -226,8 +216,7 @@ export const NodeJS = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path
@@ -260,8 +249,7 @@ export const MySql = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path
@@ -302,8 +290,7 @@ export const MongoDB = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path
@@ -333,8 +320,7 @@ export const Git = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 48 48"
     >
       <path
@@ -351,8 +337,7 @@ export const GitHub = ({ width = "100", height = "100" }) => {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={width}
-      height={height}
+      className="h-[50px] w-[50px] md:h-[70px] md:w-[70px] mx-auto"
       viewBox="0 0 50 50"
       fill="#ffffff"
     >

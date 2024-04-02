@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import ProjectCard from "../projectCard/ProjectCard";
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developer", "Web Designing", "UI/UX Designer"];
+  const toRotate = [
+    "Web Developer",
+    "Web Designing",
+    "UI/UX Designer",
+    "Full Stack Developer",
+  ];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
