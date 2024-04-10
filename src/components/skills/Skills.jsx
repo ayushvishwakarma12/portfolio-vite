@@ -25,19 +25,20 @@ const Skills = () => {
         <Heading text={"My Skills"} />
       </div>
       <div className="flex flex-wrap items-center">
-        {skills.map((e) => (
-          <div className="px-4 lg:px-12 ">
+        {skills.map((e, i) => (
+          <div className="px-4 lg:px-12 " key={i}>
             <h1 className="text-xl lg:text-2xl font-semibold my-2 mt-4 lg:my-4 ">
               {e.category}
             </h1>
             <motion.div
-              className="flex-wrap lg:flex justify-between space-y-4 gap-4 md:gap-8 lg:gap-12"
+              className="flex-wrap lg:flex gap-4 md:gap-8 lg:gap-12 space-y-4 lg:space-y-0"
               variants={variants}
               initial="initial"
               whileInView={"animate"}
             >
-              {e.skillsName.map((e) => (
+              {e.skillsName.map((e, i) => (
                 <SkillCard
+                  key={i}
                   variants={variants}
                   skillName={e.name}
                   SkillIcon={e.skillIcon}

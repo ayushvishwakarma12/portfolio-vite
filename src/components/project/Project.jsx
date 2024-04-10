@@ -1,8 +1,8 @@
 import Heading from "../heading/Heading";
 import projects from "../../utils/Projects";
-import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+// import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 import { motion } from "framer-motion";
-import { useState } from "react";
+// import { useState } from "react";
 
 const Project = () => {
   const variants = {
@@ -17,48 +17,47 @@ const Project = () => {
     },
   };
 
-  const [currentPage, setCurrentPage] = useState(0);
-  const [startIndex, setStartIndex] = useState(0);
-  const [endIndex, setEndIndex] = useState(6);
-  const [isTransitioning, setIsTransitioning] = useState(true);
+  // const [currentPage, setCurrentPage] = useState(0);
+  // const [startIndex, setStartIndex] = useState(0);
+  // const [endIndex, setEndIndex] = useState(6);
+  // const [isTransitioning, setIsTransitioning] = useState(true);
 
-  const totalPages = Math.ceil(projects.length / 6);
-  console.log(totalPages);
-  const handleNextPageButton = () => {
-    setIsTransitioning(false);
-    if (currentPage < totalPages - 1) {
-      setCurrentPage(currentPage + 1);
-      setStartIndex(startIndex + 6);
-      setEndIndex(endIndex + 6);
-      setIsTransitioning(true);
-    }
-  };
+  // const totalPages = Math.ceil(projects.length / 6);
+  // console.log(totalPages);
+  // const handleNextPageButton = () => {
+  //   setIsTransitioning(false);
+  //   if (currentPage < totalPages - 1) {
+  //     setCurrentPage(currentPage + 1);
+  //     setStartIndex(startIndex + 6);
+  //     setEndIndex(endIndex + 6);
+  //     setIsTransitioning(true);
+  //   }
+  // };
 
-  const handlePreviousPageButton = () => {
-    if (currentPage > 0) {
-      setCurrentPage(currentPage - 1);
-      setStartIndex(startIndex - 6);
-      setEndIndex(endIndex - 6);
-    }
-  };
+  // const handlePreviousPageButton = () => {
+  //   if (currentPage > 0) {
+  //     setCurrentPage(currentPage - 1);
+  //     setStartIndex(startIndex - 6);
+  //     setEndIndex(endIndex - 6);
+  //   }
+  // };
 
   return (
     <div className="pt-10 px-8">
       <Heading text={"My Recent Works"} />
       <div className="flex relative">
-        <div
+        {/* <div
           className="top-1/2 absolute cursor-pointer left-4 z-10"
           onClick={handlePreviousPageButton}
         >
           <GrFormPrevious className="h-[50px] w-[50px]" />
-        </div>
+        </div> */}
         <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto cursor-pointer mt-12"
-          initial={isTransitioning ? "initial" : false}
           whileInView="animate"
           variants={variants}
         >
-          {projects.slice(startIndex, endIndex).map((project, i) => (
+          {projects.map((project, i) => (
             <motion.div
               key={i}
               className="w-full card"
@@ -84,12 +83,12 @@ const Project = () => {
             </motion.div>
           ))}
         </motion.div>
-        <div
+        {/* <div
           className="top-1/2 absolute right-10 cursor-pointer z-10"
           onClick={handleNextPageButton}
         >
           <GrFormNext className="h-[50px] w-[50px]" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

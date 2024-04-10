@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const SkillCard = ({ SkillIcon, skillName, percentage, variants }) => {
   return (
     <motion.div
-      className="text-center py-5 lg:py-10 px-4 rounded-full border-2 border-white inline-block w-[90px] lg:w-28 mr-4"
+      className="text-center py-8 lg:py-10 px-4 rounded-full border-2 border-white inline-block w-[90px] lg:w-28 mr-4"
       variants={variants}
     >
       <SkillIcon />
