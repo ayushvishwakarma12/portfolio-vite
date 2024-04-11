@@ -1,7 +1,9 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { BiLogoGmail } from "react-icons/bi";
+//import { BiLogoGmail } from "react-icons/bi";
 import { motion, useInView } from "framer-motion";
+import { IoIosMail } from "react-icons/io";
+import { IoLocationSharp } from "react-icons/io5";
 
 const variants = {
   initial: {
@@ -76,16 +78,28 @@ const Contact = () => {
       <div className="w-full flex flex-col">
         <div className="lg:w-[60%] px-8 lg:px-[0px] lg:mx-auto mt-[100px]">
           <motion.h1
-            className="text-white font-bold text-2xl md:text-4xl lg:text-6xl"
+            className="text-white font-bold text-2xl md:text-4xl lg:text-6xl mb-8"
             variants={variants}
           >
             Get In Touch
           </motion.h1>
           <motion.div className=" text-start mt-4" variants={variants}>
-            <h2 className="font-bold text-lg md:text-xl">Mail : </h2>
-            <h2 className="text-base md:text-lg">
-              Ayushvishwakarma114@gmail.com
-            </h2>
+            <div className="flex gap-5 items-center mb-2">
+              {/* <h2 className="font-bold text-lg md:text-xl">Mail : </h2> */}
+              <div className="p-2 border white rounded-full">
+                <IoIosMail className=" h-6 w-6" />
+              </div>
+              <h2 className="text-base md:text-lg">
+                Ayushvishwakarma114@gmail.com
+              </h2>
+            </div>
+            <div className="flex gap-5 items-center">
+              {/* <h2 className="font-bold text-lg md:text-xl">Mail : </h2> */}
+              <div className="p-2 border white rounded-full mt-2">
+                <IoLocationSharp className=" h-6 w-6" />
+              </div>
+              <h2 className="text-base md:text-lg">Uttar Pradesh, Kanpur</h2>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -136,7 +150,7 @@ const Contact = () => {
         >
           <div className="flex items-center gap-2 md:gap-5">
             <input
-              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full"
+              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full focus:outline-sky-800 duration-700 ease-out outline-1"
               type="text"
               placeholder="First Name"
               value={formDetails.firstName}
@@ -144,7 +158,7 @@ const Contact = () => {
               onChange={(e) => onFormUpdate("firstName", e.target.value)}
             />
             <input
-              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full"
+              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full focus:outline-sky-800 duration-700 ease-out outline-1"
               type="text"
               placeholder="Last Name"
               name="lastname"
@@ -153,14 +167,14 @@ const Contact = () => {
           </div>
           <div className="flex items-center gap-2 md:gap-5 mt-5">
             <input
-              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full"
+              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full focus:outline-sky-800 duration-700 ease-out outline-1"
               type="email"
               placeholder="Email Address"
               name="user_email"
               onChange={(e) => onFormUpdate("email", e.target.value)}
             />
             <input
-              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full"
+              className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full focus:outline-sky-800 duration-700 ease-out outline-1"
               type="tel"
               placeholder="Phone no."
               name="phone"
@@ -169,14 +183,14 @@ const Contact = () => {
           </div>
           <textarea
             rows="6"
-            className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full mt-5"
+            className="p-4 outline-none rounded-2xl text-sm md:text-lg w-full mt-5 focus:outline-sky-800 duration-700 ease-out outline-1"
             placeholder="Message"
             name="message"
             onChange={(e) => onFormUpdate("message", e.target.value)}
           ></textarea>
           <button
             disabled={isButtonDisable}
-            className="bg-white text-black font-bold px-8 rounded-lg py-2 mt-4 hover:bg-slate-500 hover:scale-105 transition-all duration-500"
+            className="bg-white text-black font-bold px-8 rounded-lg py-2 mt-4 hover:bg-slate-200 scale-100 hover:scale-110 transition-all duration-500 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:scale-100"
           >
             {buttonText}
           </button>
